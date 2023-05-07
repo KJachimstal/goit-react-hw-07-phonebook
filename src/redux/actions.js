@@ -24,28 +24,3 @@ export const setFilter = createAction('filter/setFilter', filterValue => {
     payload: filterValue,
   };
 });
-
-// export const addContact = newContact => {
-//   return {
-//     type: 'contacts/addContact',
-//     payload: {
-//       name: newContact.name,
-//       number: newContact.number,
-//       id: nanoid(),
-//     },
-//   };
-// };
-
-// export const deleteContact = contactId => {
-//   return {
-//     type: 'contacts/deleteContact',
-//     payload: contactId,
-//   };
-// };
-
-// export const setFilter = filterValue => {
-//   return {
-//     type: 'filter/setFilter',
-//     payload: filterValue,
-//   };
-// };

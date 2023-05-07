@@ -13,12 +13,10 @@ import { fetchContacts } from 'redux/operations';
 export const Contacts = () => {
   const dispatch = useDispatch();
   const [filteredContacts, setFilteredContacts] = useState([]);
-  // const contacts = useSelector(store => store.contacts.items);
   const contacts = useSelector(getContacts);
   const error = useSelector(getError);
   const filter = useSelector(getFilter);
   const isLoading = useSelector(getIsLoading);
-  // const filter = useSelector(store => store.contacts.filter);
   console.log(`
   Contacts: ${contacts}
   IsLoading: ${isLoading}
