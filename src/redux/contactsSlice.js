@@ -5,7 +5,6 @@ const contactsInitialState = {
   items: [],
   isLoading: false,
   error: null,
-  filter: '',
 };
 
 const contactsSlice = createSlice({
