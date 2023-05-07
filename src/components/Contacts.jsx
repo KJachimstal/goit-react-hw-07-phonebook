@@ -19,11 +19,11 @@ export const Contacts = () => {
   const filter = useSelector(getFilter);
   const isLoading = useSelector(getIsLoading);
   // const filter = useSelector(store => store.contacts.filter);
-  console.log(`
-  Contacts: ${contacts}
-  IsLoading: ${isLoading}
-  Filter (${filter.type}): ${filter}
-  Error: ${error}`);
+  // console.log(`
+  // Contacts: ${contacts}
+  // IsLoading: ${isLoading}
+  // Filter (${filter.type}): ${filter}
+  // Error: ${error}`);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -36,6 +36,10 @@ export const Contacts = () => {
   //     )
   //   );
   // }, [filter, contacts]);
+
+  if (isLoading) {
+    return <h4>Loading contacts...</h4>;
+  }
 
   if (contacts.length === 0) {
     return <h4>No contacts avaliable</h4>;
