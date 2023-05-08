@@ -1,15 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from '../redux/operations';
 import { useEffect, useState } from 'react';
-import { getContacts, getFilter, getIsLoading } from 'redux/selectors';
+import { selectContacts, selectFilter, selectIsLoading } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
 
 export const Contacts = () => {
   const dispatch = useDispatch();
   const [filteredContacts, setFilteredContacts] = useState([]);
-  const contacts = useSelector(getContacts);
-  const filter = useSelector(getFilter);
-  const isLoading = useSelector(getIsLoading);
+  const contacts = useSelector(selectContacts);
+  const filter = useSelector(selectFilter);
+  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     dispatch(fetchContacts());
