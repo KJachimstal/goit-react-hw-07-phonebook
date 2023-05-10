@@ -19,13 +19,9 @@ export const App = props => {
   return (
     <div
       style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        alignItems: 'center',
-        fontSize: 40,
+        fontSize: 20,
         color: '#010101',
+        padding: '0 20px 0 20px',
       }}
     >
       <Section title="Phonebook">
@@ -36,7 +32,7 @@ export const App = props => {
           onNumberChange={handleChangeNumber}
         />
       </Section>
-      <Section title="Contacts">
+      <Section title="My contacts">
         <FindContacts />
         <Contacts />
       </Section>

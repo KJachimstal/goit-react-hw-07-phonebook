@@ -36,11 +36,16 @@ export const Contacts = () => {
   const handleDelete = contactId => dispatch(deleteContact(contactId));
 
   return (
-    <ul>
+    <ul className="contacts-list">
       {filteredContacts.map(({ name, phone, id }) => (
-        <li key={id}>
-          {name}: {phone}{' '}
-          <button type="submit" onClick={() => handleDelete(id)}>
+        <li key={id} className="contact-item">
+          <span className="contact-name">{name}</span>
+          <span className="contact-phone">{phone}</span>
+          <button
+            type="submit"
+            onClick={() => handleDelete(id)}
+            className="contact-button"
+          >
             Delete
           </button>
         </li>
